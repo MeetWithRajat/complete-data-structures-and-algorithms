@@ -8,4 +8,4 @@ def power(a, b):
         return a * power(a, b-1)
 
 
-print(power(2, -1))
+print(power(2, 5))
