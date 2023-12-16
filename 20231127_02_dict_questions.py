@@ -15,6 +15,9 @@ def count_word_frequency(words):
     return word_count
 
 
+word_list = ['apple', 'orange', 'banana', 'apple', 'orange', 'apple']
+print(count_word_frequency(word_list))
+
 """2. Common Keys
 Define a function with takes two dictionaries as parameters and merge them and sum the values of common keys.
 

@@ -1,9 +1,10 @@
 def capitalize_first(arr):
     result = []
-    if len(arr) == 1:
-        return arr[0].capitalize()
+    if len(arr) == 0:
+        return result
     else:
-        result.append(capitalize_first(arr[1:]))
+        result.append(arr[0].capitalize())
+        result += capitalize_first(arr[1:])
         return result
 
 
