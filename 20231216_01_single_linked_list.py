@@ -1,6 +1,6 @@
 class Node:
-    def __init__(self, data):
-        self.value = data
+    def __init__(self, value):
+        self.data = value
         self.next = None
 
 
@@ -16,10 +16,10 @@ class SingleLinkedList:
             list_element += "Empty"
             return list_element
         temp = self.__head
-        while temp is not None:
-            list_element += str(temp.value)
+        while temp:
+            list_element += str(temp.data)
             temp = temp.next
-            if temp is not None:
+            if temp:
                 list_element += " -> "
         return list_element
 
@@ -52,7 +52,7 @@ class SingleLinkedList:
 
     def insert_after_node(self, node_value, data):
         temp = self.__head
-        while temp is not None and temp.value != node_value:
+        while temp and temp.data != node_value:
             temp = temp.next
 
         if temp is None:
@@ -69,7 +69,7 @@ class SingleLinkedList:
         if self.__length == 0:
             print("List is already empty")
         elif self.__length == 1:
-            print(f"Last element deleted: {self.__head.value}")
+            print(f"Last element deleted: {self.__head.data}")
             self.__head = None
             self.__tail = None
             self.__length = 0
@@ -77,7 +77,7 @@ class SingleLinkedList:
             temp = self.__head
             for _ in range(self.__length - 2):
                 temp = temp.next
-            print(f"Last element deleted: {temp.next.value}")
+            print(f"Last element deleted: {temp.next.data}")
             temp.next = None
             self.__length -= 1
 
