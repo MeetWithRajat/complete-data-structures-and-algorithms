@@ -9,16 +9,18 @@ import threading
 import gc
 
 
-def test_func(a):
-    # very long work
-    for i in (range(10000)):
-        x = i
-    print("Done")
+# def test_func(a):
+#     # very long work
+#     for i in (range(10000)):
+#         x = i
+#     print("Done")
+#
+#
+# var = 6
+# t = threading.Thread(target=test_func(var))
+# t.start()
+# del var
+# gc.collect()
+# t.join()
 
-
-var = 6
-t = threading.Thread(target=test_func(var))
-t.start()
-del var
-gc.collect()
-t.join()
+print("r" * 1, "Rajat")

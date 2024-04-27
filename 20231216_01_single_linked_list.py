@@ -108,3 +108,6 @@ my_list.delete_end()
 print(my_list)
 my_list.print_info()
 print(my_list)
+
+
+print(my_list.length)
